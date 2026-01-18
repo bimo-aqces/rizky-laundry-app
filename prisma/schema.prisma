@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model Pelanggan {
+  id          Int      @id @default(autoincrement())
+  tanggal     DateTime @default(now())
+  nama        String
+  beratKg     Float?
+  adt         String?
+  paket       String
+  totalPrice  Float
+}
+
+model Transaksi {
+  id             Int      @id @default(autoincrement())
+  tanggal        DateTime @default(now())
+  nama           String
+  totalCash      Float
+  totalQris      Float
+  totalTransfer  Float
+}
+
+model Pengeluaran {
+  id         Int      @id @default(autoincrement())
+  tanggal    DateTime @default(now())
+  keterangan String
+  nominal    Float
+}
+
+

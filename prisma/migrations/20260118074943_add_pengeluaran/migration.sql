@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "Pengeluaran" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "tanggal" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "keterangan" TEXT NOT NULL,
+    "nominal" REAL NOT NULL
+);
