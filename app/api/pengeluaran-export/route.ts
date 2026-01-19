@@ -1,3 +1,7 @@
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+
 import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
 import * as XLSX from "xlsx";
