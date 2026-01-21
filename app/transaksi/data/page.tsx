@@ -5,6 +5,7 @@ import Link from "next/link";
 
 type Transaksi = {
   id: number;
+  tanggal: string;
   nama: string;
   totalCash: number;
   totalQris: number;
@@ -51,7 +52,7 @@ export default function TransaksiDataPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center text-2xl text-black bg-linear-to-b from-blue-400 to-blue-600">
         Loading...
       </div>
     );
@@ -78,6 +79,7 @@ export default function TransaksiDataPage() {
           <table className="w-full bg-white rounded shadow">
             <thead className="bg-linear-to-b from bg-yellow-400 to-yellow-600 sticky top-0">
               <tr>
+                <th className="text-gray-800 p-2 text-center border-2 border-gray-600">Tanggal</th>
                 <th className="text-gray-800 p-2 text-center border-2 border-gray-600">Nama</th>
                 <th className="text-gray-800 p-2 text-center border-2 border-gray-600">totalCash</th>
                 <th className="text-gray-800 p-2 text-center border-2 border-gray-600">totalQris</th>
@@ -96,6 +98,11 @@ export default function TransaksiDataPage() {
 
               {data.map((item) => (
                 <tr key={item.id} className="text-gray-800 text-center p-2 border-2 border-gray-600">
+                  <td className="text-gray-800 text-center p-2 border-2 border-gray-600">
+                    {item.tanggal
+                      ? new Date(item.tanggal).toLocaleDateString()
+                      : "-"}
+                  </td>
                   <td className="text-gray-800 text-center p-2 border-2 border-gray-600">{item.nama}</td>
                   <td className="text-gray-800 text-center p-2 border-2 border-gray-600">Rp {item.totalCash}</td>
                   <td className="text-gray-800 text-center p-2 border-2 border-gray-600">Rp {item.totalQris}</td>

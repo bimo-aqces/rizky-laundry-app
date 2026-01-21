@@ -53,7 +53,7 @@ export default function PengeluaranDataPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center text-2xl text-black bg-linear-to-b from-blue-400 to-blue-600">
         Loading...
       </div>
     );

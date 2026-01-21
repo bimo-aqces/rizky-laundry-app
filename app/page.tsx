@@ -18,7 +18,7 @@ export default function Home() {
       <Link
         href="/pelanggan"
         className="bg-linear-to-b from bg-yellow-400 to-yellow-600 w-[50%] text-center font-bold text-blue-600 px-6 py-3 rounded border-2 border-white">
-        Input Pelanggan
+        Input Customer
       </Link>
 
       <Link

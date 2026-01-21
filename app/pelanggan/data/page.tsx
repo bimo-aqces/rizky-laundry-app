@@ -56,7 +56,7 @@ export default function PelangganDataPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center text-2xl text-black bg-linear-to-b from-blue-400 to-blue-600">
         Loading...
       </div>
     );
@@ -64,13 +64,13 @@ export default function PelangganDataPage() {
 
   return (
     <div className="min-h-screen bg-linear-to-b from-blue-400 to-blue-600 p-6">
-      <h1 className="text-2xl font-bold mb-4">Data Pelanggan</h1>
+      <h1 className="text-2xl font-bold mb-4">Data Customer</h1>
 
       <div className="mb-4 flex justify-between">
         <Link
           href="/pelanggan"
           className="bg-linear-to-b from-blue-400 to-blue-600 p-6 text-white border-gray-200 border-2 px-4 py-2 rounded">
-          + Tambah Pelanggan
+          + Tambah Customer
         </Link>
 
         <Link
